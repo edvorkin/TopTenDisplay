@@ -1,2 +1,17 @@
 Visual interface for TrendingTopic project. Using MongoDB, Spark micro framework and
 Google Chart.
+
+To build application:
+  mvn install
+
+Artifact will be created  in target directory.
+
+To start application:
+ java -jar TopTenDisplay-1.0-SNAPSHOT-jar-with-dependencies.jar com.eugenedvorkin.route.RankingSparkMongoDBStyle
+
+ To start under supervision on Linux:
+
+ nohup ./restart.sh spark.pid java -jar TopTenDisplay-1.0-SNAPSHOT-jar-with-dependencies.jar com.eugenedvorkin.route.RankingSparkMongoDBStyle > toptendisplay.out 2>&1 &
+
+ where restart.sh located in main project directory.
+
